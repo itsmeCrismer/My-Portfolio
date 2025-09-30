@@ -1,0 +1,62 @@
+ body {
+   font-family: Inter, ui-sans-serif, system-ui;
+   scroll-behavior: smooth;
+ }
+
+ /* Simple fade-in animation */
+ .reveal {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: all 0.8s ease-out;
+ }
+
+ .reveal.active {
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ /* Animation effects */
+ .animate-fade-in {
+   opacity: 0;
+   transform: translateY(-20px);
+   transition: all 0.8s ease;
+ }
+
+ .fade-up {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: all 0.8s ease;
+ }
+
+ .reveal.active .animate-fade-in,
+ .reveal.active .fade-up {
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ .progress-bar {
+   width: 0;
+   transition: width 1.5s ease-in-out;
+ }
+
+ html {
+   scroll-behavior: smooth;
+ }
+
+ @keyframes gradientMove {
+   0% {
+     background-position: 0% 50%;
+   }
+
+   50% {
+     background-position: 100% 50%;
+   }
+
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
+ .group-hover\:animate-gradient-move {
+   animation: gradientMove 6s ease infinite;
+ }
